@@ -6,6 +6,7 @@ package tak.tik.tuk;
 
 import javax.swing.JOptionPane;
 
+
 /**
  *
  * @author Chamodi
@@ -16,6 +17,8 @@ public class MainFrame extends javax.swing.JFrame {
      * Creates new form MainFrame
      */
     int x = 0;//when x=0,it's first player turn.If x=1,then it's second player's turn.
+  
+    private int JOptionPane_OK_OPTION;
     public MainFrame() {
         initComponents();
         jPanel1.setVisible(false);
@@ -206,125 +209,819 @@ public class MainFrame extends javax.swing.JFrame {
 
     private void b1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b1ActionPerformed
         if(x==0) {
-            b1.setText("0");
-            x = 1;
-        }else{
             b1.setText("X");
-            x = 0;
+            x = 1;
+            b1.getText();
+            if(((b1.getText().equals(b2.getText()))&&(b1.getText().equals(b3.getText())))||((b1.getText().equals(b4.getText()))&&(b1.getText().equals(b7.getText())))||((b1.getText().equals(b5.getText()))&&(b1.getText().equals(b9.getText())))){
+                int option= JOptionPane.showConfirmDialog(this,"X Wins the Game!","Winner",JOptionPane.OK_OPTION);
+                    if(option==JOptionPane.OK_OPTION){
+                        b1.setText(null);
+                        b2.setText(null);
+                        b3.setText(null);
+                        b4.setText(null);
+                        b5.setText(null);
+                        b6.setText(null);
+                        b7.setText(null);
+                        b8.setText(null);
+                        b9.setText(null);
+                        x = 0;
+                       
+            
+                    }
+            
+        }else if(("X".equals(b1.getText())||"0".equals(b1.getText()))&&("X".equals(b2.getText())||"0".equals(b2.getText()))&&("X".equals(b3.getText())||"0".equals(b3.getText()))&&("X".equals(b5.getText())||"0".equals(b5.getText()))&&("X".equals(b6.getText())||"0".equals(b6.getText()))&&("X".equals(b4.getText())||"0".equals(b4.getText()))&&("X".equals(b7.getText())||"0".equals(b7.getText()))&&("X".equals(b8.getText())||"0".equals(b8.getText()))&&("X".equals(b9.getText())||"0".equals(b9.getText()))){
+            int option= JOptionPane.showConfirmDialog(this," Game is Draw!","Winner",JOptionPane.OK_OPTION);
+                    if(option==JOptionPane.OK_OPTION){
+                        b1.setText(null);
+                        b2.setText(null);
+                        b3.setText(null);
+                        b4.setText(null);
+                        b5.setText(null);
+                        b6.setText(null);
+                        b7.setText(null);
+                        b8.setText(null);
+                        b9.setText(null);
+                        x = 0;
+                       
+            
+                    }
+            
         }
-         if(checkWin()==1){
+                
+        }else{
+            b1.setText("0");
+            x = 0;
+            b1.getText();
+            if(((b1.getText().equals(b2.getText()))&&(b1.getText().equals(b3.getText())))||((b1.getText().equals(b4.getText()))&&(b1.getText().equals(b7.getText())))||((b1.getText().equals(b5.getText()))&&(b1.getText().equals(b9.getText())))){
+                int option= JOptionPane.showConfirmDialog(this,"0 Wins the Game!","Winner",JOptionPane.OK_OPTION);
+                    if(option==JOptionPane.OK_OPTION){
+                        b1.setText(null);
+                        b2.setText(null);
+                        b3.setText(null);
+                        b4.setText(null);
+                        b5.setText(null);
+                        b6.setText(null);
+                        b7.setText(null);
+                        b8.setText(null);
+                        b9.setText(null);
+                        x = 0;
+                      
+                    
+            
+                    }
+            
+            }else if(("X".equals(b1.getText())||"0".equals(b1.getText()))&&("X".equals(b2.getText())||"0".equals(b2.getText()))&&("X".equals(b3.getText())||"0".equals(b3.getText()))&&("X".equals(b5.getText())||"0".equals(b5.getText()))&&("X".equals(b6.getText())||"0".equals(b6.getText()))&&("X".equals(b4.getText())||"0".equals(b4.getText()))&&("X".equals(b7.getText())||"0".equals(b7.getText()))&&("X".equals(b8.getText())||"0".equals(b8.getText()))&&("X".equals(b9.getText())||"0".equals(b9.getText()))){
+            int option= JOptionPane.showConfirmDialog(this," Game is Draw!","Winner",JOptionPane.OK_OPTION);
+                    if(option==JOptionPane.OK_OPTION){
+                        b1.setText(null);
+                        b2.setText(null);
+                        b3.setText(null);
+                        b4.setText(null);
+                        b5.setText(null);
+                        b6.setText(null);
+                        b7.setText(null);
+                        b8.setText(null);
+                        b9.setText(null);
+                        x = 0;
+                       
+            
+                    }
+            
+        }
+            
+        }
+    
+      /*  if(checkWin()==1){
             ClearButtonTexts();
-         }
+         }*/
        
                 // TODO add your handling code here:
     }//GEN-LAST:event_b1ActionPerformed
 
     private void b2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b2ActionPerformed
          if(x==0) {
-            b2.setText("0");
-            x = 1;
-        }else{
             b2.setText("X");
-            x = 0;
+            x = 1;
+             b2.getText();
+            if(((b1.getText().equals(b2.getText()))&&(b1.getText().equals(b3.getText())))||((b2.getText().equals(b5.getText()))&&(b2.getText().equals(b8.getText())))){
+                int option= JOptionPane.showConfirmDialog(this,"X Wins the Game!","Winner",JOptionPane.OK_OPTION);
+                    if(option==JOptionPane.OK_OPTION){
+                        b1.setText(null);
+                        b2.setText(null);
+                        b3.setText(null);
+                        b4.setText(null);
+                        b5.setText(null);
+                        b6.setText(null);
+                        b7.setText(null);
+                        b8.setText(null);
+                        b9.setText(null);
+                        x = 0;
+                       
+            
+                    }
+            
+        }else if(("X".equals(b1.getText())||"0".equals(b1.getText()))&&("X".equals(b2.getText())||"0".equals(b2.getText()))&&("X".equals(b3.getText())||"0".equals(b3.getText()))&&("X".equals(b5.getText())||"0".equals(b5.getText()))&&("X".equals(b6.getText())||"0".equals(b6.getText()))&&("X".equals(b4.getText())||"0".equals(b4.getText()))&&("X".equals(b7.getText())||"0".equals(b7.getText()))&&("X".equals(b8.getText())||"0".equals(b8.getText()))&&("X".equals(b9.getText())||"0".equals(b9.getText()))){
+            int option= JOptionPane.showConfirmDialog(this," Game is Draw!","Winner",JOptionPane.OK_OPTION);
+                    if(option==JOptionPane.OK_OPTION){
+                        b1.setText(null);
+                        b2.setText(null);
+                        b3.setText(null);
+                        b4.setText(null);
+                        b5.setText(null);
+                        b6.setText(null);
+                        b7.setText(null);
+                        b8.setText(null);
+                        b9.setText(null);
+                        x = 0;
+                       
+            
+                    }
+            
+            
         }
-         if(checkWin()==1){
+                
+        }else{
+            b2.setText("0");
+            x = 0;
+            b2.getText();
+            if(((b1.getText().equals(b2.getText()))&&(b1.getText().equals(b3.getText())))||((b2.getText().equals(b5.getText()))&&(b2.getText().equals(b8.getText())))){
+                int option= JOptionPane.showConfirmDialog(this,"0 Wins the Game!","Winner",JOptionPane.OK_OPTION);
+                    if(option==JOptionPane.OK_OPTION){
+                        b1.setText(null);
+                        b2.setText(null);
+                        b3.setText(null);
+                        b4.setText(null);
+                        b5.setText(null);
+                        b6.setText(null);
+                        b7.setText(null);
+                        b8.setText(null);
+                        b9.setText(null);
+                        x = 0;
+                      
+                    
+            
+                    }
+            
+            }else if(("X".equals(b1.getText())||"0".equals(b1.getText()))&&("X".equals(b2.getText())||"0".equals(b2.getText()))&&("X".equals(b3.getText())||"0".equals(b3.getText()))&&("X".equals(b5.getText())||"0".equals(b5.getText()))&&("X".equals(b6.getText())||"0".equals(b6.getText()))&&("X".equals(b4.getText())||"0".equals(b4.getText()))&&("X".equals(b7.getText())||"0".equals(b7.getText()))&&("X".equals(b8.getText())||"0".equals(b8.getText()))&&("X".equals(b9.getText())||"0".equals(b9.getText()))){
+            int option= JOptionPane.showConfirmDialog(this," Game is Draw!","Winner",JOptionPane.OK_OPTION);
+                    if(option==JOptionPane.OK_OPTION){
+                        b1.setText(null);
+                        b2.setText(null);
+                        b3.setText(null);
+                        b4.setText(null);
+                        b5.setText(null);
+                        b6.setText(null);
+                        b7.setText(null);
+                        b8.setText(null);
+                        b9.setText(null);
+                        x = 0;
+                       
+            
+                    }
+            
+            
+        }
+         }
+        
+        /* if(checkWin()==1){
             ClearButtonTexts();
-         }// TODO add your handling code here:
+         }*/// TODO add your handling code here:
     }//GEN-LAST:event_b2ActionPerformed
 
     private void b4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b4ActionPerformed
          if(x==0) {
-            b4.setText("0");
-            x = 1;
-        }else{
             b4.setText("X");
-            x = 0;
+            x = 1;
+              b4.getText();
+            if(((b1.getText().equals(b4.getText()))&&(b1.getText().equals(b7.getText())))||((b4.getText().equals(b5.getText()))&&(b4.getText().equals(b6.getText())))){
+                int option= JOptionPane.showConfirmDialog(this,"X Wins the Game!","Winner",JOptionPane.OK_OPTION);
+                    if(option==JOptionPane.OK_OPTION){
+                        b1.setText(null);
+                        b2.setText(null);
+                        b3.setText(null);
+                        b4.setText(null);
+                        b5.setText(null);
+                        b6.setText(null);
+                        b7.setText(null);
+                        b8.setText(null);
+                        b9.setText(null);
+                        x = 0;
+                       
+            
+                    }
+            
+        }else if(("X".equals(b1.getText())||"0".equals(b1.getText()))&&("X".equals(b2.getText())||"0".equals(b2.getText()))&&("X".equals(b3.getText())||"0".equals(b3.getText()))&&("X".equals(b5.getText())||"0".equals(b5.getText()))&&("X".equals(b6.getText())||"0".equals(b6.getText()))&&("X".equals(b4.getText())||"0".equals(b4.getText()))&&("X".equals(b7.getText())||"0".equals(b7.getText()))&&("X".equals(b8.getText())||"0".equals(b8.getText()))&&("X".equals(b9.getText())||"0".equals(b9.getText()))){
+            int option= JOptionPane.showConfirmDialog(this," Game is Draw!","Winner",JOptionPane.OK_OPTION);
+                    if(option==JOptionPane.OK_OPTION){
+                        b1.setText(null);
+                        b2.setText(null);
+                        b3.setText(null);
+                        b4.setText(null);
+                        b5.setText(null);
+                        b6.setText(null);
+                        b7.setText(null);
+                        b8.setText(null);
+                        b9.setText(null);
+                        x = 0;
+                       
+            
+                    }
+            
         }
-         if(checkWin()==1){
+                
+        }else{
+            b4.setText("0");
+            x = 0;
+            b4.getText();
+            if(((b1.getText().equals(b4.getText()))&&(b1.getText().equals(b7.getText())))||((b4.getText().equals(b5.getText()))&&(b4.getText().equals(b6.getText())))){
+                int option= JOptionPane.showConfirmDialog(this,"0 Wins the Game!","Winner",JOptionPane.OK_OPTION);
+                    if(option==JOptionPane.OK_OPTION){
+                        b1.setText(null);
+                        b2.setText(null);
+                        b3.setText(null);
+                        b4.setText(null);
+                        b5.setText(null);
+                        b6.setText(null);
+                        b7.setText(null);
+                        b8.setText(null);
+                        b9.setText(null);
+                        x = 0;
+                      
+                    
+            
+                    }
+            
+            }
+            else if(("X".equals(b1.getText())||"0".equals(b1.getText()))&&("X".equals(b2.getText())||"0".equals(b2.getText()))&&("X".equals(b3.getText())||"0".equals(b3.getText()))&&("X".equals(b5.getText())||"0".equals(b5.getText()))&&("X".equals(b6.getText())||"0".equals(b6.getText()))&&("X".equals(b4.getText())||"0".equals(b4.getText()))&&("X".equals(b7.getText())||"0".equals(b7.getText()))&&("X".equals(b8.getText())||"0".equals(b8.getText()))&&("X".equals(b9.getText())||"0".equals(b9.getText()))){
+            int option= JOptionPane.showConfirmDialog(this," Game is Draw!","Winner",JOptionPane.OK_OPTION);
+                    if(option==JOptionPane.OK_OPTION){
+                        b1.setText(null);
+                        b2.setText(null);
+                        b3.setText(null);
+                        b4.setText(null);
+                        b5.setText(null);
+                        b6.setText(null);
+                        b7.setText(null);
+                        b8.setText(null);
+                        b9.setText(null);
+                        x = 0;
+                       
+            
+                    }
+            }
+         }
+    
+       
+         /*if(checkWin()==1){
             ClearButtonTexts();
-         }// TODO add your handling code here:
+         }*/// TODO add your handling code here:
     }//GEN-LAST:event_b4ActionPerformed
 
     private void b5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b5ActionPerformed
          if(x==0) {
-            b5.setText("0");
-            x = 1;
-        }else{
             b5.setText("X");
-            x = 0;
+            x = 1;
+              b5.getText();
+            if(((b2.getText().equals(b5.getText()))&&(b2.getText().equals(b8.getText())))||((b4.getText().equals(b5.getText()))&&(b4.getText().equals(b6.getText())))||((b1.getText().equals(b5.getText()))&&(b1.getText().equals(b9.getText())))||((b3.getText().equals(b5.getText()))&&(b3.getText().equals(b7.getText())))){
+                int option= JOptionPane.showConfirmDialog(this,"X Wins the Game!","Winner",JOptionPane.OK_OPTION);
+                    if(option==JOptionPane.OK_OPTION){
+                        b1.setText(null);
+                        b2.setText(null);
+                        b3.setText(null);
+                        b4.setText(null);
+                        b5.setText(null);
+                        b6.setText(null);
+                        b7.setText(null);
+                        b8.setText(null);
+                        b9.setText(null);
+                        x = 0;
+                       
+            
+                    }
+            
+        }else if(("X".equals(b1.getText())||"0".equals(b1.getText()))&&("X".equals(b2.getText())||"0".equals(b2.getText()))&&("X".equals(b3.getText())||"0".equals(b3.getText()))&&("X".equals(b5.getText())||"0".equals(b5.getText()))&&("X".equals(b6.getText())||"0".equals(b6.getText()))&&("X".equals(b4.getText())||"0".equals(b4.getText()))&&("X".equals(b7.getText())||"0".equals(b7.getText()))&&("X".equals(b8.getText())||"0".equals(b8.getText()))&&("X".equals(b9.getText())||"0".equals(b9.getText()))){
+            int option= JOptionPane.showConfirmDialog(this," Game is Draw!","Winner",JOptionPane.OK_OPTION);
+                    if(option==JOptionPane.OK_OPTION){
+                        b1.setText(null);
+                        b2.setText(null);
+                        b3.setText(null);
+                        b4.setText(null);
+                        b5.setText(null);
+                        b6.setText(null);
+                        b7.setText(null);
+                        b8.setText(null);
+                        b9.setText(null);
+                        x = 0;
+                       
+            
+                    }
+            
+            
         }
-         if(checkWin()==1){
+                
+        }else{
+            b5.setText("0");
+            x = 0;
+            b5.getText();
+            if(((b2.getText().equals(b5.getText()))&&(b2.getText().equals(b8.getText())))||((b4.getText().equals(b5.getText()))&&(b4.getText().equals(b6.getText())))||(b1.getText().equals(b5.getText())&&(b1.getText().equals(b9.getText())))||(b3.getText().equals(b7.getText()))){
+                int option= JOptionPane.showConfirmDialog(this,"0 Wins the Game!","Winner",JOptionPane.OK_OPTION);
+                    if(option==JOptionPane.OK_OPTION){
+                        b1.setText(null);
+                        b2.setText(null);
+                        b3.setText(null);
+                        b4.setText(null);
+                        b5.setText(null);
+                        b6.setText(null);
+                        b7.setText(null);
+                        b8.setText(null);
+                        b9.setText(null);
+                        x = 0;
+                    }
+                      
+                    
+            
+                    }else if(("X".equals(b1.getText())||"0".equals(b1.getText()))&&("X".equals(b2.getText())||"0".equals(b2.getText()))&&("X".equals(b3.getText())||"0".equals(b3.getText()))&&("X".equals(b5.getText())||"0".equals(b5.getText()))&&("X".equals(b6.getText())||"0".equals(b6.getText()))&&("X".equals(b4.getText())||"0".equals(b4.getText()))&&("X".equals(b7.getText())||"0".equals(b7.getText()))&&("X".equals(b8.getText())||"0".equals(b8.getText()))&&("X".equals(b9.getText())||"0".equals(b9.getText()))){
+            int option= JOptionPane.showConfirmDialog(this," Game is Draw!","Winner",JOptionPane.OK_OPTION);
+                    if(option==JOptionPane.OK_OPTION){
+                        b1.setText(null);
+                        b2.setText(null);
+                        b3.setText(null);
+                        b4.setText(null);
+                        b5.setText(null);
+                        b6.setText(null);
+                        b7.setText(null);
+                        b8.setText(null);
+                        b9.setText(null);
+                        x = 0;
+                       
+            
+                    }
+                    }
+            
+            
+            }
+         /*if(checkWin()==1){
             ClearButtonTexts();
-         }// TODO add your handling code here:
+         }*/// TODO add your handling code here:
     }//GEN-LAST:event_b5ActionPerformed
 
     private void b3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b3ActionPerformed
          if(x==0) {
-            b3.setText("0");
-            x = 1;
-        }else{
             b3.setText("X");
-            x = 0;
+            x = 1;
+              b3.getText();
+            if(((b1.getText().equals(b2.getText()))&&(b1.getText().equals(b3.getText())))||((b3.getText().equals(b6.getText()))&&(b3.getText().equals(b9.getText())))||((b3.getText().equals(b5.getText()))&&(b3.getText().equals(b6.getText())))){
+                int option= JOptionPane.showConfirmDialog(this,"X Wins the Game!","Winner",JOptionPane.OK_OPTION);
+                    if(option==JOptionPane.OK_OPTION){
+                        b1.setText(null);
+                        b2.setText(null);
+                        b3.setText(null);
+                        b4.setText(null);
+                        b5.setText(null);
+                        b6.setText(null);
+                        b7.setText(null);
+                        b8.setText(null);
+                        b9.setText(null);
+                        x = 0;
+                       
+            
+                    }
+            
+        }else if(("X".equals(b1.getText())||"0".equals(b1.getText()))&&("X".equals(b2.getText())||"0".equals(b2.getText()))&&("X".equals(b3.getText())||"0".equals(b3.getText()))&&("X".equals(b5.getText())||"0".equals(b5.getText()))&&("X".equals(b6.getText())||"0".equals(b6.getText()))&&("X".equals(b4.getText())||"0".equals(b4.getText()))&&("X".equals(b7.getText())||"0".equals(b7.getText()))&&("X".equals(b8.getText())||"0".equals(b8.getText()))&&("X".equals(b9.getText())||"0".equals(b9.getText()))){
+            int option= JOptionPane.showConfirmDialog(this," Game is Draw!","Winner",JOptionPane.OK_OPTION);
+                    if(option==JOptionPane.OK_OPTION){
+                        b1.setText(null);
+                        b2.setText(null);
+                        b3.setText(null);
+                        b4.setText(null);
+                        b5.setText(null);
+                        b6.setText(null);
+                        b7.setText(null);
+                        b8.setText(null);
+                        b9.setText(null);
+                        x = 0;
+                       
+            
+                    }
+            
+            
         }
-         if(checkWin()==1){
+                
+        }else{
+            b3.setText("0");
+            x = 0;
+            b3.getText();
+            if(((b1.getText().equals(b2.getText()))&&(b1.getText().equals(b3.getText())))||((b3.getText().equals(b6.getText()))&&(b3.getText().equals(b9.getText()))||(b3.getText().equals(b5.getText()))&&(b3.getText().equals(b6.getText())))){
+                int option= JOptionPane.showConfirmDialog(this,"0 Wins the Game!","Winner",JOptionPane.OK_OPTION);
+                    if(option==JOptionPane.OK_OPTION){
+                        b1.setText(null);
+                        b2.setText(null);
+                        b3.setText(null);
+                        b4.setText(null);
+                        b5.setText(null);
+                        b6.setText(null);
+                        b7.setText(null);
+                        b8.setText(null);
+                        b9.setText(null);
+                        x = 0;
+                      
+                    
+            
+                    }
+            
+            }else if(("X".equals(b1.getText())||"0".equals(b1.getText()))&&("X".equals(b2.getText())||"0".equals(b2.getText()))&&("X".equals(b3.getText())||"0".equals(b3.getText()))&&("X".equals(b5.getText())||"0".equals(b5.getText()))&&("X".equals(b6.getText())||"0".equals(b6.getText()))&&("X".equals(b4.getText())||"0".equals(b4.getText()))&&("X".equals(b7.getText())||"0".equals(b7.getText()))&&("X".equals(b8.getText())||"0".equals(b8.getText()))&&("X".equals(b9.getText())||"0".equals(b9.getText()))){
+            int option= JOptionPane.showConfirmDialog(this," Game is Draw!","Winner",JOptionPane.OK_OPTION);
+                    if(option==JOptionPane.OK_OPTION){
+                        b1.setText(null);
+                        b2.setText(null);
+                        b3.setText(null);
+                        b4.setText(null);
+                        b5.setText(null);
+                        b6.setText(null);
+                        b7.setText(null);
+                        b8.setText(null);
+                        b9.setText(null);
+                        x = 0;
+                       
+            
+                    }
+            
+            }
+            
+        }
+         /*if(checkWin()==1){
             ClearButtonTexts();
-         }// TODO add your handling code here:
+         }*/// TODO add your handling code here:
     }//GEN-LAST:event_b3ActionPerformed
 
     private void b7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b7ActionPerformed
          if(x==0) {
-            b7.setText("0");
-            x = 1;
-        }else{
             b7.setText("X");
-            x = 0;
+            x = 1;
+          b7.getText();
+            if(((b1.getText().equals(b7.getText()))&&(b1.getText().equals(b4.getText())))||((b7.getText().equals(b8.getText()))&&(b7.getText().equals(b9.getText())))||((b7.getText().equals(b5.getText()))&&(b3.getText().equals(b7.getText())))){
+                int option= JOptionPane.showConfirmDialog(this,"X Wins the Game!","Winner",JOptionPane.OK_OPTION);
+                    if(option==JOptionPane.OK_OPTION){
+                        b1.setText(null);
+                        b2.setText(null);
+                        b3.setText(null);
+                        b4.setText(null);
+                        b5.setText(null);
+                        b6.setText(null);
+                        b7.setText(null);
+                        b8.setText(null);
+                        b9.setText(null);
+                        x = 0;
+                       
+            
+                    }
+            
+        }else if(("X".equals(b1.getText())||"0".equals(b1.getText()))&&("X".equals(b2.getText())||"0".equals(b2.getText()))&&("X".equals(b3.getText())||"0".equals(b3.getText()))&&("X".equals(b5.getText())||"0".equals(b5.getText()))&&("X".equals(b6.getText())||"0".equals(b6.getText()))&&("X".equals(b4.getText())||"0".equals(b4.getText()))&&("X".equals(b7.getText())||"0".equals(b7.getText()))&&("X".equals(b8.getText())||"0".equals(b8.getText()))&&("X".equals(b9.getText())||"0".equals(b9.getText()))){
+            int option= JOptionPane.showConfirmDialog(this," Game is Draw!","Winner",JOptionPane.OK_OPTION);
+                    if(option==JOptionPane.OK_OPTION){
+                        b1.setText(null);
+                        b2.setText(null);
+                        b3.setText(null);
+                        b4.setText(null);
+                        b5.setText(null);
+                        b6.setText(null);
+                        b7.setText(null);
+                        b8.setText(null);
+                        b9.setText(null);
+                        x = 0;
+                       
+            
+                    }
+            
+            
+            
         }
-         if(checkWin()==1){
+                
+        }else{
+            b7.setText("0");
+            x = 0;
+            b7.getText();
+            if(((b1.getText().equals(b7.getText()))&&(b1.getText().equals(b4.getText())))||((b7.getText().equals(b8.getText()))&&(b7.getText().equals(b9.getText())))||((b7.getText().equals(b5.getText())&&(b3.getText().equals(b7.getText()))))){
+                int option= JOptionPane.showConfirmDialog(this,"0 Wins the Game!","Winner",JOptionPane.OK_OPTION);
+                    if(option==JOptionPane.OK_OPTION){
+                        b1.setText(null);
+                        b2.setText(null);
+                        b3.setText(null);
+                        b4.setText(null);
+                        b5.setText(null);
+                        b6.setText(null);
+                        b7.setText(null);
+                        b8.setText(null);
+                        b9.setText(null);
+                        x = 0;
+                      
+                    
+            
+                    }
+            
+            }
+            else if(("X".equals(b1.getText())||"0".equals(b1.getText()))&&("X".equals(b2.getText())||"0".equals(b2.getText()))&&("X".equals(b3.getText())||"0".equals(b3.getText()))&&("X".equals(b5.getText())||"0".equals(b5.getText()))&&("X".equals(b6.getText())||"0".equals(b6.getText()))&&("X".equals(b4.getText())||"0".equals(b4.getText()))&&("X".equals(b7.getText())||"0".equals(b7.getText()))&&("X".equals(b8.getText())||"0".equals(b8.getText()))&&("X".equals(b9.getText())||"0".equals(b9.getText()))){
+            int option= JOptionPane.showConfirmDialog(this," Game is Draw!","Winner",JOptionPane.OK_OPTION);
+                    if(option==JOptionPane.OK_OPTION){
+                        b1.setText(null);
+                        b2.setText(null);
+                        b3.setText(null);
+                        b4.setText(null);
+                        b5.setText(null);
+                        b6.setText(null);
+                        b7.setText(null);
+                        b8.setText(null);
+                        b9.setText(null);
+                        x = 0;
+                       
+            
+                    }
+            
+            }
+        }
+         /*if(checkWin()==1){
             ClearButtonTexts();
-         }// TODO add your handling code here:
+         }*/// TODO add your handling code here:
     }//GEN-LAST:event_b7ActionPerformed
 
     private void b6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b6ActionPerformed
          if(x==0) {
-            b6.setText("0");
-            x = 1;
-        }else{
             b6.setText("X");
-            x = 0;
+            x = 1;
+          b6.getText();
+            if(((b1.getText().equals(b6.getText()))&&(b5.getText().equals(b6.getText())))||((b6.getText().equals(b3.getText()))&&(b6.getText().equals(b9.getText())))){
+                int option= JOptionPane.showConfirmDialog(this,"X Wins the Game!","Winner",JOptionPane.OK_OPTION);
+                    if(option==JOptionPane.OK_OPTION){
+                        b1.setText(null);
+                        b2.setText(null);
+                        b3.setText(null);
+                        b4.setText(null);
+                        b5.setText(null);
+                        b6.setText(null);
+                        b7.setText(null);
+                        b8.setText(null);
+                        b9.setText(null);
+                        x = 0;
+                       
+            
+                    }
+            
+        }else if(("X".equals(b1.getText())||"0".equals(b1.getText()))&&("X".equals(b2.getText())||"0".equals(b2.getText()))&&("X".equals(b3.getText())||"0".equals(b3.getText()))&&("X".equals(b5.getText())||"0".equals(b5.getText()))&&("X".equals(b6.getText())||"0".equals(b6.getText()))&&("X".equals(b4.getText())||"0".equals(b4.getText()))&&("X".equals(b7.getText())||"0".equals(b7.getText()))&&("X".equals(b8.getText())||"0".equals(b8.getText()))&&("X".equals(b9.getText())||"0".equals(b9.getText()))){
+            int option= JOptionPane.showConfirmDialog(this," Game is Draw!","Winner",JOptionPane.OK_OPTION);
+                    if(option==JOptionPane.OK_OPTION){
+                        b1.setText(null);
+                        b2.setText(null);
+                        b3.setText(null);
+                        b4.setText(null);
+                        b5.setText(null);
+                        b6.setText(null);
+                        b7.setText(null);
+                        b8.setText(null);
+                        b9.setText(null);
+                        x = 0;
+                       
+            
+                    }
+            
+            
         }
-         if(checkWin()==1){
+                
+        }else{
+            b6.setText("0");
+            x = 0;
+            b6.getText();
+            if(((b4.getText().equals(b6.getText()))&&(b5.getText().equals(b6.getText())))||((b6.getText().equals(b3.getText()))&&(b6.getText().equals(b9.getText())))){
+                int option= JOptionPane.showConfirmDialog(this,"0 Wins the Game!","Winner",JOptionPane.OK_OPTION);
+                    if(option==JOptionPane.OK_OPTION){
+                        b1.setText(null);
+                        b2.setText(null);
+                        b3.setText(null);
+                        b4.setText(null);
+                        b5.setText(null);
+                        b6.setText(null);
+                        b7.setText(null);
+                        b8.setText(null);
+                        b9.setText(null);
+                        x = 0;
+                      
+                    
+            
+                    }
+            
+            }
+            else if(("X".equals(b1.getText())||"0".equals(b1.getText()))&&("X".equals(b2.getText())||"0".equals(b2.getText()))&&("X".equals(b3.getText())||"0".equals(b3.getText()))&&("X".equals(b5.getText())||"0".equals(b5.getText()))&&("X".equals(b6.getText())||"0".equals(b6.getText()))&&("X".equals(b4.getText())||"0".equals(b4.getText()))&&("X".equals(b7.getText())||"0".equals(b7.getText()))&&("X".equals(b8.getText())||"0".equals(b8.getText()))&&("X".equals(b9.getText())||"0".equals(b9.getText()))){
+            int option= JOptionPane.showConfirmDialog(this," Game is Draw!","Winner",JOptionPane.OK_OPTION);
+                    if(option==JOptionPane.OK_OPTION){
+                        b1.setText(null);
+                        b2.setText(null);
+                        b3.setText(null);
+                        b4.setText(null);
+                        b5.setText(null);
+                        b6.setText(null);
+                        b7.setText(null);
+                        b8.setText(null);
+                        b9.setText(null);
+                        x = 0;
+                       
+            
+                    }
+            
+            }
+        }
+         /*if(checkWin()==1){
             ClearButtonTexts();
-         }// TODO add your handling code here:
+         }*/// TODO add your handling code here:
     }//GEN-LAST:event_b6ActionPerformed
 
     private void b9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b9ActionPerformed
          if(x==0) {
-            b9.setText("0");
-            x = 1;
-        }else{
             b9.setText("X");
-            x = 0;
+            x = 1;
+          b9.getText();
+            if(((b3.getText().equals(b9.getText()))&&(b3.getText().equals(b6.getText())))||((b9.getText().equals(b7.getText()))&&(b8.getText().equals(b9.getText())))||((b5.getText().equals(b9.getText()))&&(b1.getText().equals(b9.getText())))){
+                int option= JOptionPane.showConfirmDialog(this,"X Wins the Game!","Winner",JOptionPane.OK_OPTION);
+                    if(option==JOptionPane.OK_OPTION){
+                        b1.setText(null);
+                        b2.setText(null);
+                        b3.setText(null);
+                        b4.setText(null);
+                        b5.setText(null);
+                        b6.setText(null);
+                        b7.setText(null);
+                        b8.setText(null);
+                        b9.setText(null);
+                        x = 0;
+                       
+            
+                    }
+            
+        }else if(("X".equals(b1.getText())||"0".equals(b1.getText()))&&("X".equals(b2.getText())||"0".equals(b2.getText()))&&("X".equals(b3.getText())||"0".equals(b3.getText()))&&("X".equals(b5.getText())||"0".equals(b5.getText()))&&("X".equals(b6.getText())||"0".equals(b6.getText()))&&("X".equals(b4.getText())||"0".equals(b4.getText()))&&("X".equals(b7.getText())||"0".equals(b7.getText()))&&("X".equals(b8.getText())||"0".equals(b8.getText()))&&("X".equals(b9.getText())||"0".equals(b9.getText()))){
+            int option= JOptionPane.showConfirmDialog(this," Game is Draw!","Winner",JOptionPane.OK_OPTION);
+                    if(option==JOptionPane.OK_OPTION){
+                        b1.setText(null);
+                        b2.setText(null);
+                        b3.setText(null);
+                        b4.setText(null);
+                        b5.setText(null);
+                        b6.setText(null);
+                        b7.setText(null);
+                        b8.setText(null);
+                        b9.setText(null);
+                        x = 0;
+                       
+            
+                    }
+            
+            
+            
         }
-         if(checkWin()==1){
+                
+        }else{
+            b9.setText("0");
+            x = 0;
+            b9.getText();
+            if(((b3.getText().equals(b9.getText()))&&(b3.getText().equals(b6.getText())))||((b9.getText().equals(b7.getText()))&&(b8.getText().equals(b9.getText())))||(b5.getText().equals(b9.getText()))&&(b1.getText().equals(b9.getText()))){
+                int option= JOptionPane.showConfirmDialog(this,"0 Wins the Game!","Winner",JOptionPane.OK_OPTION);
+                    if(option==JOptionPane.OK_OPTION){
+                        b1.setText(null);
+                        b2.setText(null);
+                        b3.setText(null);
+                        b4.setText(null);
+                        b5.setText(null);
+                        b6.setText(null);
+                        b7.setText(null);
+                        b8.setText(null);
+                        b9.setText(null);
+                        x = 0;
+                      
+                    
+            
+                    }
+            
+            }
+            else if(("X".equals(b1.getText())||"0".equals(b1.getText()))&&("X".equals(b2.getText())||"0".equals(b2.getText()))&&("X".equals(b3.getText())||"0".equals(b3.getText()))&&("X".equals(b5.getText())||"0".equals(b5.getText()))&&("X".equals(b6.getText())||"0".equals(b6.getText()))&&("X".equals(b4.getText())||"0".equals(b4.getText()))&&("X".equals(b7.getText())||"0".equals(b7.getText()))&&("X".equals(b8.getText())||"0".equals(b8.getText()))&&("X".equals(b9.getText())||"0".equals(b9.getText()))){
+            int option= JOptionPane.showConfirmDialog(this," Game is Draw!","Winner",JOptionPane.OK_OPTION);
+                    if(option==JOptionPane.OK_OPTION){
+                        b1.setText(null);
+                        b2.setText(null);
+                        b3.setText(null);
+                        b4.setText(null);
+                        b5.setText(null);
+                        b6.setText(null);
+                        b7.setText(null);
+                        b8.setText(null);
+                        b9.setText(null);
+                        x = 0;
+                       
+            
+                    }}
+        }
+         /*if(checkWin()==1){
             ClearButtonTexts();
-         }// TODO add your handling code here:
+         }*/// TODO add your handling code here:
     }//GEN-LAST:event_b9ActionPerformed
 
     private void b8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b8ActionPerformed
          if(x==0) {
-            b8.setText("0");
-            x = 1;
-        }else{
             b8.setText("X");
+            x = 1;
+              b8.getText();
+            if(((b8.getText().equals(b2.getText()))&&(b8.getText().equals(b5.getText())))||((b8.getText().equals(b7.getText()))&&(b8.getText().equals(b9.getText())))){
+                int option= JOptionPane.showConfirmDialog(this,"X Wins the Game!","Winner",JOptionPane_OK_OPTION);
+                    if(option==JOptionPane_OK_OPTION){
+                        b1.setText(null);
+                        b2.setText(null);
+                        b3.setText(null);
+                        b4.setText(null);
+                        b5.setText(null);
+                        b6.setText(null);
+                        b7.setText(null);
+                        b8.setText(null);
+                        b9.setText(null);
+                        x = 0;
+                       
+            
+                    }
+            
+        }else if(("X".equals(b1.getText())||"0".equals(b1.getText()))&&("X".equals(b2.getText())||"0".equals(b2.getText()))&&("X".equals(b3.getText())||"0".equals(b3.getText()))&&("X".equals(b5.getText())||"0".equals(b5.getText()))&&("X".equals(b6.getText())||"0".equals(b6.getText()))&&("X".equals(b4.getText())||"0".equals(b4.getText()))&&("X".equals(b7.getText())||"0".equals(b7.getText()))&&("X".equals(b8.getText())||"0".equals(b8.getText()))&&("X".equals(b9.getText())||"0".equals(b9.getText()))){
+            int option= JOptionPane.showConfirmDialog(this," Game is Draw!","Winner",JOptionPane.OK_OPTION);
+                    if(option==JOptionPane.OK_OPTION){
+                        b1.setText(null);
+                        b2.setText(null);
+                        b3.setText(null);
+                        b4.setText(null);
+                        b5.setText(null);
+                        b6.setText(null);
+                        b7.setText(null);
+                        b8.setText(null);
+                        b9.setText(null);
+                        x = 0;
+                       
+            
+                    }
+            
+        }
+                
+        }else{
+            b8.setText("0");
             x = 0;
+            b8.getText();
+            if(((b8.getText().equals(b2.getText()))&&(b8.getText().equals(b5.getText())))||((b8.getText().equals(b7.getText()))&&(b8.getText().equals(b9.getText())))){
+                int option= JOptionPane.showConfirmDialog(this,"0 Wins the Game!","Winner",JOptionPane.OK_OPTION);
+                    if(option==JOptionPane.OK_OPTION){
+                        b1.setText(null);
+                        b2.setText(null);
+                        b3.setText(null);
+                        b4.setText(null);
+                        b5.setText(null);
+                        b6.setText(null);
+                        b7.setText(null);
+                        b8.setText(null);
+                        b9.setText(null);
+                        x = 0;
+                      
+                    
+            
+                    }
+            
+            }
+            else if(("X".equals(b1.getText())||"0".equals(b1.getText()))&&("X".equals(b2.getText())||"0".equals(b2.getText()))&&("X".equals(b3.getText())||"0".equals(b3.getText()))&&("X".equals(b5.getText())||"0".equals(b5.getText()))&&("X".equals(b6.getText())||"0".equals(b6.getText()))&&("X".equals(b4.getText())||"0".equals(b4.getText()))&&("X".equals(b7.getText())||"0".equals(b7.getText()))&&("X".equals(b8.getText())||"0".equals(b8.getText()))&&("X".equals(b9.getText())||"0".equals(b9.getText()))){
+            int option= JOptionPane.showConfirmDialog(this," Game is Draw!","Winner",JOptionPane.OK_OPTION);
+                    if(option==JOptionPane.OK_OPTION){
+                        b1.setText(null);
+                        b2.setText(null);
+                        b3.setText(null);
+                        b4.setText(null);
+                        b5.setText(null);
+                        b6.setText(null);
+                        b7.setText(null);
+                        b8.setText(null);
+                        b9.setText(null);
+                        x = 0;
+                       
+            
+                    }
+            }
         } 
-         if(checkWin()==1){
+         /*if(checkWin()==1){
             ClearButtonTexts();
-         }// TODO add your handling code here:
+         }*/// TODO add your handling code here:
     }//GEN-LAST:event_b8ActionPerformed
 
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
-        jPanel1.setVisible(true);        // TODO add your handling code here:
+        jPanel1.setVisible(true);
+        b1.setText(null);
+        b2.setText(null);
+        b3.setText(null);
+        b4.setText(null);
+        b5.setText(null);
+        b6.setText(null);
+        b7.setText(null);
+        b8.setText(null);
+        b9.setText(null);
+        x = 0;
+                
+                    // TODO add your handling code here:
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 
     private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
@@ -336,69 +1033,18 @@ public class MainFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItem2ActionPerformed
 
     private void jMenu2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenu2ActionPerformed
-                // TODO add your handling code here:
+        int option = JOptionPane.showConfirmDialog(this, "Two players needs to play this game.First layer is X and second player is 0.Its like normal Tak Tik Tuk game ", "Method to play",JOptionPane.CANCEL_OPTION);
+       
+        // TODO add your handling code here:
+        
     }//GEN-LAST:event_jMenu2ActionPerformed
 
     /**
      * @param args the command line arguments
      */
    
-    int checkWin(){
-        if(b1.getText().equals(b2.getText())&&b1.getText().equals(b3.getText())&&b1.getText().equals("X wins")){
-             JOptionPane.showMessageDialog(JOptionPane.getFrameForComponent(b1), "0 wins");
-             return 1;
-        }else if(b1.getText().equals(b2.getText())&&b1.getText().equals(b3.getText())&&b1.getText().equals("0 wins")){
-             JOptionPane.showMessageDialog(JOptionPane.getFrameForComponent(b1), "X wins");
-             return 1;
-        }else if(b4.getText().equals(b5.getText())&&b4.getText().equals(b6.getText())&&b4.getText().equals("0 wins")){
-             JOptionPane.showMessageDialog(JOptionPane.getFrameForComponent(b4), "X wins");
-             return 1;
-         }else if(b4.getText().equals(b5.getText())&&b4.getText().equals(b6.getText())&&b4.getText().equals("X wins")){
-             JOptionPane.showMessageDialog(JOptionPane.getFrameForComponent(b4), "0 wins");
-             return 1;
-         }else if(b7.getText().equals(b8.getText())&&b7.getText().equals(b9.getText())&&b7.getText().equals("0 wins")){
-             JOptionPane.showMessageDialog(JOptionPane.getFrameForComponent(b4), "X wins");
-             return 1;
-         }else if(b7.getText().equals(b8.getText())&&b7.getText().equals(b9.getText())&&b7.getText().equals("X wins")){
-             JOptionPane.showMessageDialog(JOptionPane.getFrameForComponent(b7), "0 wins");
-             return 1;
-          }else if(b1.getText().equals(b5.getText())&&b1.getText().equals(b9.getText())&&b1.getText().equals("0 wins")){
-             JOptionPane.showMessageDialog(JOptionPane.getFrameForComponent(b7), "X wins");
-             return 1;
-         }else if(b1.getText().equals(b5.getText())&&b1.getText().equals(b9.getText())&&b1.getText().equals("X wins")){
-             JOptionPane.showMessageDialog(JOptionPane.getFrameForComponent(b1), "0 wins");
-             return 1;
-           }else if(b3.getText().equals(b5.getText())&&b3.getText().equals(b7.getText())&&b3.getText().equals("0 wins")){
-             JOptionPane.showMessageDialog(JOptionPane.getFrameForComponent(b3), "X wins");
-             return 1;
-         }else if(b3.getText().equals(b5.getText())&&b3.getText().equals(b7.getText())&&b3.getText().equals("X wins")){
-             JOptionPane.showMessageDialog(JOptionPane.getFrameForComponent(b3), "0 wins");
-             return 1;
-         }else {
-             
-         
-        
-        
-        
-        
-        
-        
-        }
-        //check whether a player makes a win
-        return 0;
-    }
     
-    void ClearButtonTexts(){
-    b1.setText("");    
-    b2.setText("");
-    b3.setText("");
-    b4.setText("");
-    b5.setText("");
-    b6.setText("");
-    b7.setText("");
-    b8.setText("");
-    b9.setText("");
-    }      
+  
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
